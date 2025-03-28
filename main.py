@@ -34,3 +34,9 @@ def compare_files(file1: str, file2: str) -> None:
     write_file("same.txt", same_lines)
     write_file("diff.txt", diff_lines)
 
+if __name__ == "__main__":
+    file1 = input("Введіть шлях до першого файлу: ")
+    file2 = input("Введіть шлях до другого файлу: ")
+
+    compare_files(file1, file2)
+    print("Результати збережено у 'same.txt' та 'diff.txt'.")
