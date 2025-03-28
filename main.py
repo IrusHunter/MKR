@@ -1,3 +1,4 @@
+from typing import List
 
 
 def read_file_lines(filename: str) -> list:
@@ -8,3 +9,8 @@ def read_file_lines(filename: str) -> list:
     except FileNotFoundError:
         print(f"Помилка: файл '{filename}' не знайдено.")
         return []
+
+def write_file(filename: str, lines: List[str]) -> None:
+    """Записує множину рядків у файл."""
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write("\n".join(lines) if lines else "")
